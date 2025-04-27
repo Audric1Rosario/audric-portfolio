@@ -1,19 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+// Theme
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { useThemeContext } from "./assets/theme/ThemeContextProvider.jsx";
 import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+function App({ children }) {
+  const { theme } = useThemeContext();
   return (
-    <>
-      {/* <h1>Hello world</h1> */}
-      <Contact />
-      {/* <Footer></Footer> */}
-    </>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
   );
 }
 

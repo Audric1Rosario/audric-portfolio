@@ -1,22 +1,33 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
-import "../assets/styles/Footer.css";
+import { IconButton, Typography, Tooltip } from "@mui/material";
+//import "../assets/styles/Footer.css";
 
 function Footer() {
   return (
-    <footer>
-      <div>
-        <a href="https://github.com/Audric1Rosario" target="_blank">
-          <GitHubIcon />
-        </a>
-        <a href="https://www.linkedin.com/in/audricrosario/" target="_blank">
-          <LinkedIn />
-        </a>
-        <p>
-          A portfolio designed & built by <span>Audric Rosario</span>
-        </p>
-      </div>
-    </footer>
+    <>
+      <IconButton
+        component="a"
+        href="https://github.com/Audric1Rosario"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GitHubIcon color="primary" />
+      </IconButton>
+      <IconButton
+        component="a"
+        href="https://www.linkedin.com/in/audricrosario/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LinkedIn color="primary" />
+      </IconButton>
+
+      <Typography variant="body2" color="textSecondary">
+        © {new Date().getFullYear()} Portfolio designed & built by Audric
+        Rosario — All rights reserved
+      </Typography>
+    </>
   );
 }
 
