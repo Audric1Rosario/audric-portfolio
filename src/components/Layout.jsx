@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 // Components
 import {
   Box,
   AppBar,
   Toolbar,
   Typography,
-  Button,
   IconButton,
   Drawer,
   List,
@@ -29,41 +28,58 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 // Router
 import { Outlet } from "react-router";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
 // items
 const menuItems = [
   {
     title: "Home",
-    url: "/",
+    url: "#hero",
   },
-  {
-    title: "About Me",
-    url: "/",
-  },
+  // {
+  //   title: "About Me",
+  //   url: "/",
+  // },
   {
     title: "Expertise",
-    url: "/",
+    url: "#expertise",
   },
   {
     title: "History",
-    url: "/",
+    url: "#career",
   },
   {
     title: "Projects",
-    url: "/",
+    url: "#projects",
   },
-  {
-    title: "Contact",
-    url: "/",
-  },
+  // {
+  //   title: "Contact",
+  //   url: "/",
+  // },
 ];
 
 export default function Layout() {
+  // Theme
   const { mode, toggleColorMode } = useThemeContext();
   const theme = useTheme();
+  // Responsiveness
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // Navigation
+  const location = useLocation();
   const navigator = useNavigate();
+  const header = useRef(null);
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        const height = header.current.offsetHeight;
+        const top = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: top - height, behavior: "smooth" });
+        //element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location.hash]);
 
   // Drawer
   const [open, setOpen] = useState(false);
@@ -85,7 +101,7 @@ export default function Layout() {
 
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
-      <AppBar component="header" position="sticky">
+      <AppBar ref={header} component="header" position="sticky">
         <Toolbar>
           {/* Toggle mode (dark/light) */}
           <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">

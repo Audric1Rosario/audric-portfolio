@@ -15,11 +15,11 @@ function Contact() {
   // const [emailError, setEmailError] = useState("");
   // const [messageError, setMessageError] = useState("");
   return (
-    <>
+    <Box id="contact">
       <Typography variant="h4" gutterBottom>
         Contact Me
       </Typography>
-      <Typography variant="textSecondary">
+      <Typography variant="body1">
         Want to build a project? Let's make it happen!
       </Typography>
       <Box
@@ -72,7 +72,7 @@ function Contact() {
           </Grid>
         </Grid>
       </Box>
-    </>
+    </Box>
   );
 }
 export default Contact;

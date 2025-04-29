@@ -18,6 +18,7 @@ export default function Hero() {
   const theme = useTheme();
   return (
     <Box
+      id="hero"
       sx={{
         minHeight: "700px",
         "@media (max-width:700px)": {
@@ -82,7 +83,7 @@ export default function Hero() {
               Audric Rosario
             </Typography>
             <Typography variant="h5" component="h2" gutterBottom>
-              Computer Science Engineer
+              Computer Systems Engineer
             </Typography>
           </Box>
         </Box>

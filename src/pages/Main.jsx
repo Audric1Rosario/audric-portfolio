@@ -1,6 +1,10 @@
-import { Container, useTheme } from "@mui/material";
-import Contact from "../components/Contact";
+import { Box, Container, useTheme } from "@mui/material";
 import Hero from "../components/Hero";
+import Expertise from "../components/Expertise";
+import About from "../components/About";
+import Career from "../components/Career";
+import Projects from "../components/Projects";
+import Thanks from "../components/Thanks";
 export default function Main() {
   const theme = useTheme();
   return (
@@ -19,7 +23,14 @@ export default function Main() {
           mt: theme.spacing(8),
         }}
       >
-        <Contact />
+        <Box display="flex" flexDirection="column" gap={theme.spacing(8)}>
+          <About />
+          <Expertise />
+          <Career />
+          <Projects />
+          {/* <Contact /> */}
+          <Thanks />
+        </Box>
       </Container>
     </>
   );
