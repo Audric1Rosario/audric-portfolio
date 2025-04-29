@@ -10,18 +10,22 @@ import App from "./App.jsx";
 import Main from "./pages/Main.jsx";
 import Layout from "./components/Layout.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: Layout,
-    children: [
-      {
-        index: true,
-        Component: Main,
-      },
-    ],
-  },
-]);
+const basename = import.meta.env.BASE_URL;
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: Layout,
+      children: [
+        {
+          index: true,
+          Component: Main,
+        },
+      ],
+    },
+  ],
+  { basename: basename }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
