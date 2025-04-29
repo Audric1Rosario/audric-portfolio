@@ -105,7 +105,7 @@ export default function Layout() {
         <Toolbar>
           {/* Toggle mode (dark/light) */}
           <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
-            {mode === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
+            {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
           <Typography
             variant="h6"
