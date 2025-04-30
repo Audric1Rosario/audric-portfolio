@@ -1,5 +1,14 @@
-### Portafolio de Audric Rosario
+### Audric's Portfolio by 29th April 2025
 
-portafolio-audric
-npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
-npm i react-router-dom
+## Made by
+
+- Audric Rosario
+
+# Tech Stack
+
+- React 19
+- Material UI Library
+  - Components
+  - Icons
+  - Lab
+- Fontawesome Icons

@@ -20,8 +20,6 @@ import Footer from "./Footer";
 import { useThemeContext } from "../assets/theme/ThemeContextProvider";
 
 // Icons
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";

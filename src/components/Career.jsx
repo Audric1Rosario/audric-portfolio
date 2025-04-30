@@ -4,13 +4,9 @@ import {
   Typography,
   List,
   ListItem,
-  Container,
   Card,
-  CardMedia,
   CardHeader,
   CardContent,
-  CardActions,
-  Paper,
 } from "@mui/material";
 import {
   Timeline,

@@ -82,7 +82,7 @@ export const expertise = [
 export const careerHistory = [
   {
     id: 1,
-    company: "Engineering and Service Technological E&ST", //| Claro Dominicana's Contractor
+    company: "Engineering and Service Technological E&ST",
     position: "Software Engineer",
     startDate: new Date(2022, 2, 1),
     endDate: null,

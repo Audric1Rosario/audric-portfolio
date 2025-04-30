@@ -17,9 +17,9 @@ export default function Main() {
       <Container
         maxWidth={false}
         sx={{
-          maxWidth: "1600px", // máximo 1600px incluso en 4K
+          maxWidth: "1600px", // max, good even in 4K
           width: "100%",
-          px: { xs: 2, md: 6 }, // padding lateral para no pegarse
+          px: { xs: 2, md: 6 }, // make sure to add padding
           mt: theme.spacing(8),
         }}
       >

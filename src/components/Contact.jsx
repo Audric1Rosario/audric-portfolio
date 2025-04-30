@@ -1,10 +1,11 @@
 // import emailjs from '@emailjs/browser';
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
 import { Box, Button, Typography, Grid, useTheme } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import TextField from "@mui/material/TextField";
 //import "../assets/styles/Contact.css";
 
+// CURRENTLY NOT IN USE
 function Contact() {
   const theme = useTheme();
   // const [name, setName] = useState("");
