@@ -10,7 +10,7 @@ import App from "./App.jsx";
 import Main from "./pages/Main.jsx";
 import Layout from "./components/Layout.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
-
+// Portfolio made by Audric Rosario
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeContextProvider>
