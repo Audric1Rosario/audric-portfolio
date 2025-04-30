@@ -27,14 +27,14 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 // Router
-import { Outlet } from "react-router";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate, useLocation, Outlet } from "react-router";
+import {} from "react-router";
 
 // items
 const menuItems = [
   {
     title: "Home",
-    url: "#hero",
+    url: "/#hero",
   },
   // {
   //   title: "About Me",
@@ -42,15 +42,15 @@ const menuItems = [
   // },
   {
     title: "Expertise",
-    url: "#expertise",
+    url: "/#expertise",
   },
   {
     title: "History",
-    url: "#career",
+    url: "/#career",
   },
   {
     title: "Projects",
-    url: "#projects",
+    url: "/#projects",
   },
   // {
   //   title: "Contact",
