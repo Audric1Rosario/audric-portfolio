@@ -23,20 +23,20 @@ export default function About() {
             component="blockquote"
             sx={{ fontStyle: "italic" }}
           >
-            I'm a Computer Systems Engineer with over 3 years of experience,
+            I'm a Systems and Computer Engineer with over 3 years of experience,
             <br />
             <br />I currently work as a Full Stack Web Developer and I'm
-            transitioning into Data Science, Big Data and AI. I’m passionate
-            about transforming data into meaningful solutions and building
-            scalable systems. Whether it’s analyzing complex datasets, designing
-            architectures, or fine-tuning performance, I enjoy tackling
-            challenges.
+            transitioning into the field of Data Science, Big Data and AI. I’m
+            passionate about transforming data into meaningful solutions and
+            building scalable systems. Whether it’s analyzing complex datasets,
+            designing architectures, or fine-tuning performance, I enjoy
+            tackling challenges.
             <br />
             <br /> On my free time, I solve problems on platforms like LeetCode
             and HackerRank to keep my skills sharp and constantly improve.
             <br />
-            <br />I thrive in collaborative environments, I enjoy working with
-            diverse teams, and I am always eager to learn, grow, and contribute.
+            <br />I enjoy working in collaborative environments with diverse
+            teams and I'm always eager to learn, grow and contribute.
           </Typography>
         </Paper>
       </Box>
