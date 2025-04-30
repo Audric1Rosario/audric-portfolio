@@ -23,7 +23,7 @@ export default function About() {
             component="blockquote"
             sx={{ fontStyle: "italic" }}
           >
-            I'm a Computer Systems Engineer with over 4 years of experience,
+            I'm a Computer Systems Engineer with over 3 years of experience,
             <br />
             <br />I currently work as a Full Stack Web Developer and I'm
             transitioning into Data Science, Big Data and AI. I’m passionate

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Typography,
   Box,
@@ -15,6 +16,48 @@ import { useThemeContext } from "../assets/theme/ThemeContextProvider";
 
 export default function Hero() {
   const { mode, toggleColorMode } = useThemeContext();
+  const titles = [
+    "Systems and Computer Engineer",
+    "Full Stack Developer",
+    "Future Data Scientist",
+  ];
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [displayedTitle, setDisplayedTitle] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  // Adjust for typing speed
+  const speed = 150;
+  const [typingSpeed, setTypingSpeed] = useState(speed);
+
+  const deleteSpeed = 75;
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const currentFullTitle = titles[currentTitleIndex];
+
+      if (isDeleting) {
+        setDisplayedTitle(
+          currentFullTitle.substring(0, displayedTitle.length - 1)
+        );
+        setTypingSpeed(deleteSpeed);
+      } else {
+        setDisplayedTitle(
+          currentFullTitle.substring(0, displayedTitle.length + 1)
+        );
+        setTypingSpeed(speed);
+      }
+
+      if (!isDeleting && displayedTitle === currentFullTitle) {
+        setIsDeleting(true);
+        setTypingSpeed(1000); // Pause before deleting
+      } else if (isDeleting && displayedTitle === "") {
+        setIsDeleting(false);
+        setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, [displayedTitle, isDeleting, currentTitleIndex, titles, typingSpeed]);
+
   const theme = useTheme();
   return (
     <Box
@@ -42,7 +85,7 @@ export default function Hero() {
             flexDirection: { xs: "column", md: "row" },
             textAlign: { xs: "center", md: "left" },
             alignItems: "center",
-            gap: 4, // separación entre texto e imagen
+            gap: 4, // between text/image gap
           }}
         >
           {/* Imagen */}
@@ -53,8 +96,8 @@ export default function Hero() {
             sx={{
               width: { xs: "200px", md: "300px" },
               height: "auto",
-              borderRadius: "50%", // imagen circular
-              boxShadow: 3, // sombra
+              borderRadius: "50%", // circular profile picture
+              boxShadow: 3, // profile shadow
             }}
           />
           <Box>
@@ -82,8 +125,13 @@ export default function Hero() {
             >
               Audric Rosario
             </Typography>
-            <Typography variant="h5" component="h2" gutterBottom>
-              Computer Systems Engineer
+            <Typography
+              variant="h5"
+              sx={{ fontSize: { xs: "1.25rem", md: "1.75rem" } }}
+              component="h2"
+              gutterBottom
+            >
+              {displayedTitle + "."}
             </Typography>
           </Box>
         </Box>

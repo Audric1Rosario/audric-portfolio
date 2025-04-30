@@ -109,9 +109,7 @@ export default function Layout() {
             variant="h6"
             component="div"
             sx={{ marginLeft: theme.spacing(2), flexGrow: 1 }}
-          >
-            My Portfolio
-          </Typography>
+          ></Typography>
 
           {/* Open Drawer */}
           {isMobile ? (
