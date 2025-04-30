@@ -72,6 +72,7 @@ export default function Projects() {
                 <Box sx={{ ml: "auto" }}>
                   {project.video != "" ? (
                     <IconButton
+                      title="Video"
                       aria-label="watch video"
                       component="a"
                       href={project.video}
@@ -83,6 +84,7 @@ export default function Projects() {
                   ) : null}
                   {project.repo != "" ? (
                     <IconButton
+                      title="Code"
                       aria-label="read code"
                       component="a"
                       href={project.repo}

@@ -102,7 +102,12 @@ export default function Layout() {
       <AppBar ref={header} component="header" position="sticky">
         <Toolbar>
           {/* Toggle mode (dark/light) */}
-          <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
+          <IconButton
+            title="Change theme"
+            sx={{ ml: 1 }}
+            onClick={toggleColorMode}
+            color="inherit"
+          >
             {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
           <Typography

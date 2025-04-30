@@ -10,6 +10,7 @@ import darkBackground from "../assets/images/dark-background.jpg";
 import lightBackground from "../assets/images/light-background.jpg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import profileImage from "../assets/images/profile.png";
 // Theme
 import { useThemeContext } from "../assets/theme/ThemeContextProvider";
@@ -102,6 +103,7 @@ export default function Hero() {
           />
           <Box>
             <IconButton
+              title="GitHub"
               component="a"
               href="https://github.com/Audric1Rosario"
               target="_blank"
@@ -110,12 +112,21 @@ export default function Hero() {
               <GitHubIcon color="light" />
             </IconButton>
             <IconButton
+              title="LinkedIn"
               component="a"
               href="https://www.linkedin.com/in/audricrosario/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <LinkedIn color="light" />
+            </IconButton>
+            <IconButton
+              title="Contact"
+              component="a"
+              href="mailto:audricarr050@gmail.com"
+              rel="noopener noreferrer"
+            >
+              <EmailOutlinedIcon color="light" />
             </IconButton>
             <Typography
               variant="h2"
