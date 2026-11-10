@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audric Rosario | Solutions Architect | Senior Software Engineer</title>
+    <meta
+      name="description"
+      content="Audric Rosario, Solutions Architect and Senior Software Engineer. Designing data platforms, cloud architectures, and applied AI."
+    />
+    <meta name="author" content="Audric Rosario" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Audric Rosario | Solutions Architect | Senior Software Engineer" />
+    <meta
+      property="og:description"
+      content="Designing data platforms, cloud architectures, and applied AI."
+    />
+    <meta property="og:url" content="https://audric1rosario.github.io/audric-portfolio/" />
+    <meta name="theme-color" content="#13141c" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Audric Rosario</title>
+    <!-- Apply the saved theme before first paint (dark by default) to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var mode = localStorage.getItem("audric-theme-mode");
+          document.documentElement.setAttribute("data-theme", mode === "light" ? "light" : "dark");
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <style>
+      html[data-theme="dark"] { background: #13141c; color-scheme: dark; }
+      html[data-theme="light"] { background: #f8fafc; color-scheme: light; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-<!-- // Portfolio made by Audric Rosario -->
+<!-- Portfolio designed & built by Audric Rosario -->
