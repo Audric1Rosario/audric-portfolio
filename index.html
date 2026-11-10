@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audric Rosario | Solutions Architect | Senior Software Engineer</title>
+    <meta
+      name="description"
+      content="Audric Rosario, Solutions Architect and Senior Software Engineer. Designing data platforms, cloud architectures, and applied AI."
+    />
+    <meta name="author" content="Audric Rosario" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Audric Rosario | Solutions Architect | Senior Software Engineer" />
+    <meta
+      property="og:description"
+      content="Designing data platforms, cloud architectures, and applied AI."
+    />
+    <meta property="og:url" content="https://audric1rosario.github.io/audric-portfolio/" />
+    <meta name="theme-color" content="#13141c" />
     <link rel="apple-touch-icon" sizes="180x180" href="/audric-portfolio/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/audric-portfolio/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/audric-portfolio/favicon-16x16.png" />
     <link rel="manifest" href="/audric-portfolio/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Audric Rosario</title>
-    <script type="module" crossorigin src="/audric-portfolio/assets/index-Cii988br.js"></script>
+    <!-- Apply the saved theme before first paint (dark by default) to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var mode = localStorage.getItem("audric-theme-mode");
+          document.documentElement.setAttribute("data-theme", mode === "light" ? "light" : "dark");
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <style>
+      html[data-theme="dark"] { background: #13141c; color-scheme: dark; }
+      html[data-theme="light"] { background: #f8fafc; color-scheme: light; }
+    </style>
+    <script type="module" crossorigin src="/audric-portfolio/assets/index-B2Cy3m-Z.js"></script>
+    <link rel="modulepreload" crossorigin href="/audric-portfolio/assets/react-DJG_os-6.js">
+    <link rel="modulepreload" crossorigin href="/audric-portfolio/assets/mui-CQ23M9Fh.js">
+    <link rel="stylesheet" crossorigin href="/audric-portfolio/assets/index-DhMLm5ky.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
+<!-- Portfolio designed & built by Audric Rosario -->
